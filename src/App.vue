@@ -1,7 +1,12 @@
 <template>
   <div>
-    <h1>{{ msg }}</h1>
-    <app-car></app-car>
+    <h1>Parent: {{ carName }}</h1>
+    <app-car
+      :carName="carName"
+      :carYear="carYear"
+      :changeFunc="changeNameToAudi"
+      @nameChanged="carName = $event"
+    ></app-car>
   </div>
 </template>
 
@@ -11,7 +16,13 @@
 export default {
   data () {
     return {
-      msg: 'Welcome to Your Vue.js App'
+      carName:'ford',
+      carYear: 2011
+    }
+  },
+  methods: {
+    changeNameToAudi(){
+      this.carName = 'Audi'
     }
   },
   components: {/*локальний імпорт компоненту*/
