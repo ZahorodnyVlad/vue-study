@@ -4,6 +4,8 @@ import App from './App.vue'
 
 Vue.component('app-car', Car)*/ /*реєстрація компоненту глобально*/
 
+export const eventEmitter = new Vue()
+
 new Vue({
   el: '#app',
   render: function(h){
