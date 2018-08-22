@@ -1,24 +1,27 @@
 <template>
   <div>
 
-    <app-counter></app-counter>
+      <h2 v-colored:background="'red'">{{ title }}</h2>
+      <h2 v-colored:color="'blue'">{{ title }}</h2>
 
-    <app-car></app-car>
+    <button v-on:click></button>
+
   </div>
 </template>
 
   <script>
-    import Car from './Car.vue'/*локальний імпорт компоненту*/
-    import Counter from './Counter.vue'/*локальний імпорт компоненту*/
 
 export default {
-  components: {
-    appCar: Car,
-    appCounter: Counter
+  data() {
+    return {
+      title: 'Hello!'
+    }
   }
 }
 </script>
 
-<style>
+<style scoped>
+  
+
 
 </style>

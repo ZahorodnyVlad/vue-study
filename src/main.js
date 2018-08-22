@@ -1,10 +1,11 @@
 import Vue from 'vue'
 import App from './App.vue'
-/*import Car from './Car.vue'
+import ColorDirective from './color'
 
-Vue.component('app-car', Car)*/ /*реєстрація компоненту глобально*/
 
-export const eventEmitter = new Vue()
+Vue.directive('colored', ColorDirective)
+// Vue.component('app-car', Car)*/ /*реєстрація компоненту глобально*/
+
 
 new Vue({
   el: '#app',
