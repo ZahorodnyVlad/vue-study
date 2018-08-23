@@ -1,11 +1,9 @@
 import Vue from 'vue'
 import App from './App.vue'
-import ColorDirective from './color'
 
 
-Vue.directive('colored', ColorDirective)
-// Vue.component('app-car', Car)*/ /*реєстрація компоненту глобально*/
-
+Vue.filter('uppercase', value => value.toUpperCase()
+)
 
 new Vue({
   el: '#app',
