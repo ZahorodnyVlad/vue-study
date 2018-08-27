@@ -1,37 +1,26 @@
 <template>
   <div>
-    <h2>{{ title }}</h2>
 
-    <input type="text" v-model="searchName">
-
-    <ul>
-      <li v-for="name of filteredNames">{{ name }}</li>
-    </ul>
+    <select v-model="defaultSocial">
+      <option v-for="s in socialList" :selected="s === defaultSocial">{{ s }}</option>
+    </select>
 
     <hr>
 
-    <app-list>
-    </app-list>
 
   </div>
 </template>
 
   <script>
 
-    import ListMixin from './listMixin'
 
 export default {
   data() {
     return {
-      title: 'Hello!',
+      defaultSocial: 'fb',
+      socialList: ['ins', 'li', 'fb']
     }
   },
-  mixins: [ListMixin],
-  filters: {
-    lowercase(value) {
-      return value.toLowerCase()
-    }
-  }
 }
 </script>
 
